@@ -32,11 +32,17 @@ public class Station {
             shield = shield - amount;
         }
     }
+    public void update()
+    {
 
+    }
+    public void outInfo()
+    {
+
+    }
 }
 
 class room {
-
     String name;
     boolean isFire;
     boolean isToxic;
