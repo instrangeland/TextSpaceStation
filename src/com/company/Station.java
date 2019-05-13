@@ -1,6 +1,11 @@
 package com.company;
 
 public class Station {
+    Loyalty loyalty;
+
+    public void setLoyalty(Loyalty loyalty) {
+        this.loyalty = loyalty;
+    }
     int health;
     int maxhealth;
     int shield;
@@ -24,6 +29,9 @@ public class Station {
 
     }
 
+    enum Loyalty {
+        Human, Alien1, Alien2, Pirate
+    }
     public void takeDamage(int amount) {
         if (shield < amount) {
             health = health - (amount - shield);
