@@ -64,8 +64,11 @@ public class Person {
     public int getO2Consume() {
         return o2Consume;
     }
-
     public int getCo2Release() { return co2Release; }
+    public int getCurrentRoom()
+    {
+        return currentRoom;
+    }
     enum Gender {
         MALE, FEMALE
     }
@@ -77,6 +80,7 @@ public class Person {
     enum BadTraits {
         none, foodMouth, sloth, mouthBreather, slowRunner, unlucky
     }
+
 
 
 }

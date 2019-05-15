@@ -57,8 +57,7 @@ public class dynamlinks {
                 }
             }
         }
-        System.out.println();
-        System.out.println(nextWrite);
+
         if (nextWrite + 1 < links.length) {
             int[] linkStartNew = new int[nextEntry];
             System.arraycopy(links, 0, linkStartNew, 0, nextWrite);
