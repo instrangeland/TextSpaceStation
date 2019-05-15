@@ -15,7 +15,7 @@ public class dynamlinks {
                 }
                 catch (NumberFormatException ex)
                 {
-                    throw new IllegalArgumentException("Error: non integer character at index "+Integer.toString(i));
+                    throw new IllegalArgumentException("Error: non integer character at index " + i);
                 }
             }
         }
@@ -39,7 +39,6 @@ public class dynamlinks {
         }
 
     }
-
     public int[] getLinks(int node) {
         int[] links= new int[20];
         int nextWrite = 0;

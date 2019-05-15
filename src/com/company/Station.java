@@ -47,6 +47,26 @@ public class Station {
     public void update()
     {
         crew.update();
+
+        int[] localRoomLinks;
+
+        int toSet;
+        for (int j = 0; j < roomObjList.length; j++) {
+            localRoomLinks = roomlinks.getLinks(j);
+            assert (localRoomLinks.length > 0);
+            for (int i = 0; i < localRoomLinks.length; i++) {
+                if (roomObjList[j].getCO2Ratio() > roomObjList[localRoomLinks[i]].getCO2Ratio()) {
+                    toSet = (int) (.5 * (roomObjList[j].getCO2Ratio() - roomObjList[localRoomLinks[i]].getCO2Ratio()) * roomObjList[localRoomLinks[i]].getGasCapacity());
+                    roomObjList[j].addCO2(-toSet);
+                    roomObjList[localRoomLinks[i]].addCO2(toSet);
+                }
+                if (roomObjList[j].getO2Ratio() > roomObjList[localRoomLinks[i]].getO2Ratio()) {
+                    toSet = (int) (.5 * (roomObjList[j].getO2Ratio() - roomObjList[localRoomLinks[i]].getO2Ratio()) * roomObjList[localRoomLinks[i]].getGasCapacity());
+                    roomObjList[j].addO2(-toSet);
+                    roomObjList[localRoomLinks[i]].addO2(toSet);
+                }
+            }
+        }
     }
     public void outInfo()
     {
@@ -95,8 +115,27 @@ class room {
     }
 
     public boolean canConnect(int room1, int room2) {
-
         return false;
+    }
+
+    public int getAmountCO2() {
+        return amountCO2;
+    }
+
+    public int getAmountO2() {
+        return amountO2;
+    }
+
+    public int getGasCapacity() {
+        return gasCapacity;
+    }
+
+    public int getCO2Ratio() {
+        return amountCO2 / gasCapacity;
+    }
+
+    public int getO2Ratio() {
+        return amountO2 / gasCapacity;
     }
 }
 
