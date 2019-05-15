@@ -10,6 +10,7 @@ public class Person {
     BadTraits badTraits;
     GoodTraits goodTraits;
     Gender gender;
+    Task[] task = new Task[30];
     int currentRoom;
     int[] jobStack = new int[30];
     int foodCount;
@@ -59,6 +60,7 @@ public class Person {
 
         pottyCount--;
         sleepCount--;
+
     }
 
     public int getO2Consume() {
@@ -80,7 +82,8 @@ public class Person {
     enum BadTraits {
         none, foodMouth, sloth, mouthBreather, slowRunner, unlucky
     }
-
-
-
+    enum TaskTypes {
+        move,build,need,use,trade,fix
+    }
 }
+

@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14bb6dd5-4f82-4daa-88b7-e378c0e61681" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Station/com/company/Crew.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Station/com/company/Crew.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Station/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Station/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Station/com/company/dynamlinks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Station/com/company/dynamlinks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Crew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Crew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Station.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/dynamlinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/dynamlinks.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Station.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="350">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="class#Loyalty#0;class#Station#0" />
                 <element signature="method#takeDamage#0;class#Station#0" />
@@ -58,17 +52,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Crew.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="306">
+              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Person.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="80" column="22" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="22" />
+            <state relative-caret-position="34">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -98,11 +101,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/Person.java" />
         <option value="$PROJECT_DIR$/src/com/company/dynamlinks.java" />
         <option value="$PROJECT_DIR$/src/com/company/Crew.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Station.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Person.java" />
       </list>
     </option>
   </component>
@@ -212,7 +215,7 @@
       <workItem from="1557782605934" duration="1501000" />
       <workItem from="1557786405208" duration="3421000" />
       <workItem from="1557874538461" duration="2516000" />
-      <workItem from="1557877764133" duration="4198000" />
+      <workItem from="1557877764133" duration="4507000" />
     </task>
     <task id="LOCAL-00001" summary="Began work on actual crew work, seperated crew and person classes">
       <created>1557784096299</created>
@@ -235,11 +238,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557879784662</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finished even more gas stuff. Added oxygen consumed by fire and fixed issues with gas distribution and gas consumption">
+      <created>1557883451322</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557883451322</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11973000" />
+    <option name="totallyTimeSpent" value="12282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -358,26 +368,11 @@
     <MESSAGE value="Began work on actual crew work, seperated crew and person classes" />
     <MESSAGE value="Continued crew work and started Gas stuff" />
     <MESSAGE value="Hopefully finished some gas stuff." />
-    <option name="LAST_COMMIT_MESSAGE" value="Hopefully finished some gas stuff." />
+    <MESSAGE value="Finished even more gas stuff. Added oxygen consumed by fire and fixed issues with gas distribution and gas consumption" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished even more gas stuff. Added oxygen consumed by fire and fixed issues with gas distribution and gas consumption" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="80" column="22" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Crew.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/dynamlinks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -436,13 +431,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Station.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="350">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="class#Loyalty#0;class#Station#0" />
             <element signature="method#takeDamage#0;class#Station#0" />
             <element signature="method#room#0;class#room#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Crew.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -496,7 +512,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>TextSpaceStation</last-edited>
+          <last-edited>Station</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
