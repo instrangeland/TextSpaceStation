@@ -60,9 +60,12 @@ public class Person {
 
         pottyCount--;
         sleepCount--;
+        doWork();
+    }
+    private void doWork()
+    {
 
     }
-
     public int getO2Consume() {
         return o2Consume;
     }
@@ -82,8 +85,6 @@ public class Person {
     enum BadTraits {
         none, foodMouth, sloth, mouthBreather, slowRunner, unlucky
     }
-    enum TaskTypes {
-        move,build,need,use,trade,fix
-    }
+
 }
 
