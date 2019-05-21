@@ -10,7 +10,7 @@ public class Station {
     int maxhealth;
     int shield;
     int maxshield;
-    dynamlinks roomlinks = new dynamlinks();
+    public dynamlinks roomlinks = new dynamlinks();
     String roomListToLink = "0,1,0,5,0,2,1,3,1,4,1,5,2,5,2,6,2,7,3,4,3,8,4,8,5,8,5,9,6,7,6,9,7,9,8,10,9,10,10,11";
     int[] startingCO2 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int[] gasCapacity = {1200, 1500, 1500, 800, 1200, 900, 800, 800, 1500, 1500, 900, 800};
@@ -31,8 +31,39 @@ public class Station {
         roomlinks.importLinks(roomListToLink);
 
     }
+    public int[] getRoomAndDistance(int roomOne, int roomTwo)
+    {
+        int[] checkedRooms = new int[15];
+        int roomsChecked=-1;
+        int[] nodes = new int[15];
+        int nodesSize = 1;
+        int newNodesNextWrite=0;
+        int[] returnz = {0,0};
+        int[] newNodes = new int[15];
+        int[] links;
+        nodes[0]=roomOne;
+        while (nodesSize>0)
+        {
+            for (int j=0; j<newNodesNextWrite; j++) {
+                links=roomlinks.getLinks(nodes[j]);
+                for (int k=0; k<links.length; k++)
+                {
+                    //TODO: Here it'll check if we've already checked this room. If not, it'll skip.
+
+                }
+            }
 
 
+            nodesSize=newNodesNextWrite-1;
+            nodes=newNodes;
+            for (int i=0;i<15; i++)
+            {
+
+                newNodes[i]=0;
+            }
+        }
+        return returnz;
+    }
     enum Loyalty {
         Human, Alien1, Alien2, Pirate
     }

@@ -1,6 +1,6 @@
 package com.company;
 
-import org.jetbrains.annotations.Contract;
+
 
 public class Person {
     int HP;
@@ -24,17 +24,7 @@ public class Person {
     boolean skipNextFood = false;
     boolean doubleNextFood = false;
 
-    /**
-     * @param badTraits   is an enumerated type, see Person.java for names
-     * @param goodTraits  is an enumerated type, see Person.java for names
-     * @param HP          starting HP of person, probably will start at maxHP
-     * @param maxHP       maximum hp
-     * @param o2Consume   amount of o2 used per tick
-     * @param co2Release  amount of co2 released per tick
-     * @param currentRoom prob will start in a single room?
-     * @param skillLvl    is 10 int array, maybe won't always be 10. Is amount of work done per tick
-     */
-    @Contract(pure = true)
+
     public Person(BadTraits badTraits, GoodTraits goodTraits, int HP, int maxHP, int o2Consume, int co2Release, int currentRoom, int[] skillLvl) {
         this.badTraits = badTraits;
         this.goodTraits = goodTraits;
@@ -44,6 +34,9 @@ public class Person {
         this.co2Release = co2Release;
         this.currentRoom = currentRoom;
         this.skillLvl = skillLvl;
+        jobNextWrite=1;
+        task[0].setupAll(Task.TaskTypes.idle, -1, -1, 0);
+
     }
 
 
@@ -64,8 +57,40 @@ public class Person {
     }
     private void doWork()
     {
+        if (getTopTaskType()!=Task.TaskTypes.idle)
+        {
+            if ((getTopTaskRoom()==currentRoom)||(getTopTaskRoom()==-1))
+            {
+                task[jobNextWrite-1].doWork(skillLvl[getTopTaskSkillUsed()]);
+                if (getTopTaskWorkLeft()<1)
+                {
+                    removeStackTop();
+                }
+            }
+            else
+            {
 
+            }
+        }
     }
+    private void removeStackTop()
+    {
+        jobNextWrite=jobNextWrite-1;
+    }
+    private int getTopTaskRoom() {
+        return task[jobNextWrite-1].getRoomLocation();
+    }
+    private int getTopTaskWorkLeft() {
+        return task[jobNextWrite-1].getWorkLeft();
+    }
+    private Task.TaskTypes getTopTaskType() {
+        return task[jobNextWrite-1].getTaskTypes();
+    }
+    private int getTopTaskSkillUsed() {
+        return task[jobNextWrite-1].getSkillUsed();
+    }
+
+
     public int getO2Consume() {
         return o2Consume;
     }
