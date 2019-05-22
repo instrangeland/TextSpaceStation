@@ -1,6 +1,14 @@
 package com.company;
 
 public class Main {
+    public static boolean contains(final int[] array, final int key) {
+        for (final int i : array) {
+            if (i == key) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public static void main(String[] args)
         throws InterruptedException {

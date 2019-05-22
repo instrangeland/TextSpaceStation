@@ -38,28 +38,58 @@ public class Station {
         int[] nodes = new int[15];
         int nodesSize = 1;
         int newNodesNextWrite=0;
-        int[] returnz = {0,0};
+        int[] returnz = {-1,-1};
         int[] newNodes = new int[15];
         int[] links;
+        int[] firstNode = new int[15];
+        boolean firstRun = true;
         nodes[0]=roomOne;
+        int[] newFirstNodes = new int[15];
+        int timesRun=0;
         while (nodesSize>0)
         {
+            timesRun++;
             for (int j=0; j<newNodesNextWrite; j++) {
-                links=roomlinks.getLinks(nodes[j]);
-                for (int k=0; k<links.length; k++)
+                links=roomlinks.getLinks(nodes[j]);//get links for current node
+                for (int k=0; k<links.length; k++)//cycle through links of node
                 {
-                    //TODO: Here it'll check if we've already checked this room. If not, it'll skip.
+                    if (!Main.contains(checkedRooms,links[k]+1))//have we already checked this??
+                    {
+                        //TODO: It should also check if the room is dangerous (e.g. fire or depressurized or something)
+                        roomsChecked++;
+                        checkedRooms[roomsChecked]=links[k]+1;
+                        newNodes[newNodesNextWrite]=links[k];
 
+                        if (firstRun=true)
+                        {
+                            newFirstNodes[newNodesNextWrite]=links[k];
+                        }
+                        else
+                        {
+                            newFirstNodes[newNodesNextWrite]=firstNode[j];
+                        }
+                        newNodesNextWrite++;
+                    }
                 }
             }
-
-
+            firstRun=false;
+            firstNode=newFirstNodes;
             nodesSize=newNodesNextWrite-1;
+            newNodesNextWrite=0;
             nodes=newNodes;
             for (int i=0;i<15; i++)
             {
-
+                newFirstNodes[i]=0;
                 newNodes[i]=0;
+            }
+            for (int j=0; j<nodesSize; j++)
+            {
+                if (nodes[j]==roomTwo)
+                {
+                    returnz[0]=firstNode[j];
+                    returnz[1]=timesRun;
+                    return returnz;
+                }
             }
         }
         return returnz;

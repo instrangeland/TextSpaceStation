@@ -5,7 +5,10 @@ public class Task {
 
 
     int roomLocation;
+    public void Task()
+    {
 
+    }
 
     TaskTypes taskTypes;
     int workLeft;
